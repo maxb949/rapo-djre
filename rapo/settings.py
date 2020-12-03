@@ -60,12 +60,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'rapo.urls'
 
-CORS_ORIGIN_ALLOW_ALL = False
-
+# запрет кроссайтовых запросов - False
+CORS_ORIGIN_ALLOW_ALL = False # this allows all domains
+CORS_ALLOW_CREDENTIALS = True
+#Or to allow specific domains 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:8000',
     'http://localhost:8080',
+    'https://baconipsum.com',
 
     ]
 
